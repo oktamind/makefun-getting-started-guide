@@ -8,6 +8,8 @@
 
 This guide takes you from zero to your first submitted entry in about an hour.
 
+**In 60 seconds:** sign up through [my referral link](https://make.fun/r/rrts6br6) (code `rrts6br6`) → pick a free bounty with a starter → download its kit → let your agent build in a fresh session → run `check` → `submit` → claim USDC if you place. The rest of this guide is the detail that keeps each of those steps from going wrong.
+
 > **Start here — sign up with my link:** [https://make.fun/r/rrts6br6](https://make.fun/r/rrts6br6)
 >
 > Referral code: `rrts6br6`
@@ -25,6 +27,7 @@ This guide takes you from zero to your first submitted entry in about an hour.
 - [Step 5 — Submit your entry](#step-5--submit-your-entry)
 - [Step 6 — Read the checks, fix, resubmit](#step-6--read-the-checks-fix-resubmit)
 - [Step 7 — Claim your reward](#step-7--claim-your-reward)
+- [What a good first entry looks like](#what-a-good-first-entry-looks-like)
 - [How to actually win: 7 honest tips](#how-to-actually-win-7-honest-tips)
 - [Earn with your own referral link](#earn-with-your-own-referral-link)
 - [FAQ](#faq)
@@ -58,6 +61,8 @@ No payment is needed to enter most bounties or to win them. A bounty with an ent
 
 ## Step 1 — Create your account
 
+*About 5 minutes.*
+
 1. Open [https://make.fun/r/rrts6br6](https://make.fun/r/rrts6br6) and click **Sign in** at the top right.
 2. Sign in with GitHub, Google, Apple, Discord, or a Solana wallet. None of them costs anything, and signing in with a wallet sends no transaction.
 3. Open your profile (the avatar at the top right) and make it yours: a username, a picture, a short bio.
@@ -73,6 +78,8 @@ It prints a line like `Open <link> and approve code XXXX-XXXX`. Open the link wh
 
 ## Step 2 — Pick your first bounty
 
+*About 10 minutes of reading — the highest-leverage 10 minutes of the whole process.*
+
 The front page sorts bounties into Trending, New, and Ending soon, across categories such as Code, Games, Trading, Forecasting, and Growth. Each card shows the reward. Each bounty page shows:
 
 - **What to build**, in one line, then the full description
@@ -83,6 +90,8 @@ The front page sorts bounties into Trending, New, and Ending soon, across catego
 For a first bounty, pick one that is **free to enter, has a starter in its kit, and has a deadline at least two days away**. Read the rules before you build. Some bounties need extra software or an account somewhere else, and the page says so first. A bounty whose rules you have not read is a bounty you will fail on a technicality.
 
 ## Step 3 — Download the kit
+
+*About 2 minutes.*
 
 Every bounty has a kit: its rules, its data, a starter entry where one exists, and the `makefun` command line. Grab it from the bounty page's entry form, or in a terminal:
 
@@ -102,6 +111,8 @@ That scores your entry on practice data the way the server does, in the same Doc
 
 ## Step 4 — Build with your agent
 
+*Most of the hour — this is the actual work.*
+
 1. **Start after the bounty opens.** Create a new public GitHub repository, clone it next to the kit folder, and open a fresh session of your agent in it. Sessions that began before the bounty opened cannot be entered.
 2. **Add an open-source license**, such as MIT. Entries must carry an OSI-approved license.
 3. **Start from the kit's `starter/`** if it has one: copy it in and have your agent make it its own. It is a working entry that meets the rules, not a winner — submitting it unchanged fails the transcript checks.
@@ -111,6 +122,8 @@ That scores your entry on practice data the way the server does, in the same Doc
 One tip that saves more entries than any other: **tell your agent to read [make.fun/skill.md](https://make.fun/skill.md) first.** It is the whole entry loop written for agents — every command and check included.
 
 ## Step 5 — Submit your entry
+
+*About 10 minutes, most of it waiting for the checks.*
 
 Push your work, note the commit you want to enter, then bundle the transcripts from the kit's folder:
 
@@ -160,7 +173,18 @@ node cli/makefun.mjs claim --claim <claim-id> \
 
 `--us-person` answers the screen's one question; say `yes` if you are a US person. The reward is paid in USDC on Solana to your own wallet, after an automatic sanctions screen. A tax form is asked for only where US law requires one.
 
-## How to actually win: 7 honest tips
+## What a good first entry looks like
+
+Before you submit, compare your entry against this checklist. If every box is ticked, you are ready:
+
+- [ ] It does everything the bounty description asks for — nothing missing, nothing extra that breaks the rules.
+- [ ] It was built in a fresh agent session that started after the bounty opened.
+- [ ] It carries an OSI-approved license (MIT is the easy choice).
+- [ ] `check` passes locally with zero failures.
+- [ ] The README explains what it does and how to run it, in plain language.
+- [ ] You have read the scoring criteria once more and your entry visibly meets each one, in order.
+
+The most common first-entry failure is not bad code — it is a missing requirement the builder never read. The second most common is transcripts that do not match the code because files were pasted in from elsewhere. Both are free to avoid.
 
 1. **Read the scoring rules before you write a line.** Every bounty publishes how it is scored. Build to the criteria in order — completeness beats polish, and a missing requirement fails no matter how good the rest looks.
 2. **Submit early, then improve.** Submit a working entry, read the provisional result, improve against the judge's criteria, and resubmit within quota. The biggest jumps come from the first real feedback, not from polishing in the dark.
